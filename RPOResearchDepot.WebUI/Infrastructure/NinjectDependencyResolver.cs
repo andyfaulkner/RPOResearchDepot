@@ -8,6 +8,8 @@ using Ninject;
 using RPOResearchDepot.Domain.Abstract;
 using RPOResearchDepot.Domain.Entities;
 using RPOResearchDepot.Domain.Concrete;
+using RPOResearchDepot.WebUI.Infrastructure.Abstract;
+using RPOResearchDepot.WebUI.Infrastructure.Concrete;
 
 namespace RPOResearchDepot.WebUI.Infrastructure
 {
@@ -34,7 +36,11 @@ namespace RPOResearchDepot.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
+
+            kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
         }
+
+       
          
     }
 }
