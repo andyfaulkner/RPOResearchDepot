@@ -18,7 +18,7 @@ namespace RPOResearchDepot.WebUI
                 new
                 {
                     Controller = "Product",
-                    Action = "List",
+                    Action = "Index",
                     category = (string)null, page = 1
                 }
             );
