@@ -13,14 +13,15 @@ namespace RPOResearchDepot.Domain.Concrete
 {
     public class EmailSettings
     {
+        //email settings for connecting and sending the order by email using smtp
         public string MailToAddress = "noreply@andy-faulkner.uk";
         public string MailFromAddress = "noreply@andy-faulkner.uk";
-        public bool UseSsl = true;
+        public bool UseSsl = false;
         public string Username = "noreply@andy-faulkner.uk";
         public string Password = "Noreply@domain01";
         public string ServerName = "mail.andy-faulkner.uk";
         public int ServerPort = 587;
-        public bool WriteAsFile = true;
+        public bool WriteAsFile = false;
         public string FileLocation = @"c:\rpo_emails";
     }
 

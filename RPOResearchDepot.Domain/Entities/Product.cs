@@ -16,6 +16,7 @@ namespace RPOResearchDepot.Domain.Entities
         public string Name { get; set; }
         [DataType(DataType.MultilineText)]
         [Required(ErrorMessage = "Please enter a description")]
+        [AllowHtml]
         public string Description { get; set; }
         [Required]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a positive price")]

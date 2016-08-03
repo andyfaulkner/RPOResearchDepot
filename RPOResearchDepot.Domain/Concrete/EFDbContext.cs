@@ -10,6 +10,7 @@ namespace RPOResearchDepot.Domain.Concrete
 {
     class EFDbContext : DbContext
     {
+        //create the connection to the product database using entity framework
         public DbSet<Product> Products { get; set; }
     }
 }

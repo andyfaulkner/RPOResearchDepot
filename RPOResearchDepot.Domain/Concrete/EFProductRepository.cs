@@ -10,6 +10,7 @@ namespace RPOResearchDepot.Domain.Concrete
 {
     public class EFProductRepository : IProductRepository
     {
+        //create new DBContext to get the products from the database
         private EFDbContext context = new EFDbContext();
 
         public IEnumerable<Product> Products
@@ -17,6 +18,7 @@ namespace RPOResearchDepot.Domain.Concrete
             get { return context.Products; }
         }
 
+        //method to create new products and update products already in the database
         public void SaveProduct(Product product)
         {
             if (product.ProductID == 0)
@@ -39,6 +41,7 @@ namespace RPOResearchDepot.Domain.Concrete
             context.SaveChanges();
         }
 
+        //delete product from database method
         public Product DeleteProduct(int productID)
         {
             Product dbEntry = context.Products.Find(productID);
